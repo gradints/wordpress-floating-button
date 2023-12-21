@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>wa-svg</title>
+	<defs>
+		<image width="512" height="512" id="img1" href="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTEyIDUxMiIgaGVpZ2h0PSI1MTIiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB3aWR0aD0iNTEyIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnPjxwYXRoIGQ9Im0zMTcuMDggMzMyLjg2LTYxLjE1LTYyLjI1LTYxLjE0IDYyLjIzYy0zLjg4IDMuOTUtMTAuMjYgMy44OS0xNC4wNy0uMTItMy42LTMuOC0zLjU3LTkuNzUuMDYtMTMuNTJsNjEuMDEtNjMuMjItNjAuOTYtNjIuNWMtMy42Ni0zLjc1LTMuNy05LjcyLS4xLTEzLjUyIDMuOC00LjAxIDEwLjE2LTQuMDYgMTQuMDMtLjEybDYxLjE2IDYyLjI1IDYxLjE3LTYyLjkyYzMuODctMy45OCAxMC4yNS0zLjk2IDE0LjEuMDIgMy42OCAzLjgxIDMuNjcgOS44Ni0uMDIgMTMuNjdsLTYxLjM2IDYzLjEyIDYxLjM1IDYzLjFjMy43MSAzLjgxIDMuNzIgOS44OC4wMiAxMy43LTMuODQgNC0xMC4yMiA0LjAzLTE0LjEuMDh6Ii8+PC9nPjwvc3ZnPg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="cancel" href="#img1" transform="matrix(.047,0,0,.047,0,0)"/>
+</svg>

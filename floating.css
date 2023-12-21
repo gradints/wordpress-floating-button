@@ -1,0 +1,95 @@
+.style-1 {
+    display: block;
+    background-size: 25px 25px !important;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: fixed;
+    right: 20px;
+    z-index: 99;
+    border: 1px solid var(--white);
+}
+.style-1.button_whatsapp_1 {
+   bottom: 20px;
+}
+.style-1.button_whatsapp_2 {
+    bottom: 75px;
+}
+.style-1.button_whatsapp_3 {
+    bottom: 130px;
+}
+.style-1.button_whatsapp_4 {
+    bottom: 185px;
+}
+.style-1.button_whatsapp_5 {
+    bottom: 240px;
+}
+
+.style-1 span {
+    display: none;
+}
+
+.gate-style-2 {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: #25D366 url('img/wa.svg') center center no-repeat;
+    background-size: 25px !important;
+    border-radius: 99px;
+    overflow: hidden;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 99;
+}
+.gate-style-2.x {
+    background: #25D366 url('img/x.svg') center center no-repeat;
+}
+
+/* style2 ========================== */
+.gate-style-2 span{
+    display: none;
+}
+.wrap-style-2 {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    width: 40px;
+    display: none;
+    width: auto;
+}
+.style-2 {
+    width: 40px;
+    height: 40px;
+    display: block;
+    bottom: 70px;
+    border-radius: 99px;
+    margin-bottom: 8px;
+    background-size: 25px !important;
+} 
+.style-2 span {
+    background: var(--white);
+    padding: 0px 18px;
+    position: absolute;
+    right: 46px;
+    border-radius: 50px;
+    display: none;
+    margin-top: 8px;
+    margin-right: 5px;
+    color: black;
+}
+.style-2:hover span {
+    display: block;
+}
+.style-2 span::after {
+    content: "";
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent var(--white);
+  }
