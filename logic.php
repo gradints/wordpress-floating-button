@@ -1,5 +1,40 @@
 <?php
 
+/**
+ * Format backslash to slash
+ * @param string $text text to be formatted
+ * @return string formatted text
+ */
+function format_slash($text) {
+    return str_replace( "\\",  "/", $text);
+}
+
+/**
+ * Get formatted WP absolute path
+ * @return string WP absolute path (formatted)
+ */
+function get_absolute_path() {
+    return format_slash(rtrim(ABSPATH, "/"));
+}
+
+/**
+ * Get formatted relative directory of feature
+ * @param string $path path to file or folder
+ * @return string relative directory of feature (formatted)
+ */
+function feature_dir($path = "") {
+    return str_replace(get_absolute_path(), "", feature_absolute_dir($path));
+}
+
+/**
+ * Get formatted absolute directory of feature
+ * @param string $path path to file or folder
+ * @return string absolute directory of feature (formatted)
+ */
+function feature_absolute_dir($path = "") {
+    return format_slash(realpath(dirname(__FILE__) ."/". $path));
+}
+
 add_action('admin_menu', function () {
     $pageTitle = __('Floating Button');
     $menuTitle = $pageTitle;
@@ -26,8 +61,8 @@ add_filter(
 
 // split css feature floating
 add_action('wp_print_styles', function () {
-    wp_enqueue_style('floating-style', get_stylesheet_directory_uri() . '/assets/feature_floating/floating.css' . '?' . filemtime(get_stylesheet_directory() . '/assets/feature_floating/floating.css'), array(), null);
-    wp_enqueue_script('floating-script', get_stylesheet_directory_uri() . '/assets/feature_floating/floating.js', array('jquery'), filemtime(get_stylesheet_directory() . '/assets/feature_floating/floating.js'), true);
+    wp_enqueue_style('floating-style', feature_dir('floating.css'), array(), filemtime(feature_absolute_dir('floating.css')));
+    wp_enqueue_script('floating-script', feature_dir('floating.js'), array('jquery'), filemtime(feature_absolute_dir('floating.js')), true);
 });
 
 // attach the settings to the admin_init hook
@@ -72,7 +107,7 @@ add_shortcode('display_floating', function () {
     if ($selectstyle == 'style-1') {
         for ($i = 1; $i <= 5; $i++) {
             $image = get_option('floating_image_'.$i);
-            $imageUrl = wp_get_attachment_image_url($image, 'original');
+            $imageUrl = wp_get_attachment_image_url($image, 'original') ?: feature_dir('./img/wa-xl.svg');
 
             $bgColor = get_option('floating_background_color_'.$i);
             $url = get_option('floating_button_url_'.$i);
@@ -137,7 +172,7 @@ function media_include_js()
     // our custom JS
     wp_enqueue_script(
         'popup-media',
-        get_stylesheet_directory_uri() . '/assets/wordpress-floating-button/media.js',
+        feature_dir('media.js'),
         array('jquery')
     );
 }

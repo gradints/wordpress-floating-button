@@ -77,6 +77,7 @@
 <!-- -> style-2 : 1 button floating wrap all button selected -->
 
 <h1>Floating Button</h1>
+<p>Default icon is Whatsapp if you want to change the icon, click upload image button</p>
 
 <form action="options.php" method="POST">
     <?php settings_fields('floating_button_settings'); ?>
