@@ -107,7 +107,7 @@ add_shortcode('display_floating', function () {
     if ($selectstyle == 'style-1') {
         for ($i = 1; $i <= 5; $i++) {
             $image = get_option('floating_image_'.$i);
-            $imageUrl = wp_get_attachment_image_url($image, 'original');
+            $imageUrl = wp_get_attachment_image_url($image, 'original') ?: feature_dir('./img/wa-xl.svg');
 
             $bgColor = get_option('floating_background_color_'.$i);
             $url = get_option('floating_button_url_'.$i);
